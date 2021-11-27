@@ -3,10 +3,10 @@ import styles from './ShowDescription.module.scss';
 
 export const ShowDescription = () => {
   return (
-    <div>
-      <img className={styles.showImage} src={null} alt='Show' />
-      <div className={styles.showDescription}>This is ShowDescription</div>
-      <div className={styles.showInfo}>
+    <div className={styles['description-container']}>
+      <img className={styles['show-image']} src={null} alt='Show' />
+      <div className={styles['show-description']}>This is ShowDescription</div>
+      <div className={styles['show-info']}>
         <h2>ShowInfo</h2>
         <div>Network: {null}</div>
         <div>Schedule: {null}</div>

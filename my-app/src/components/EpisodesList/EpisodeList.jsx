@@ -5,8 +5,18 @@ import { SeasonAccordion } from '../Accordion/Accordion';
 export const EpisodeList = () => {
   return (
     <div>
-      <h2>This is EpisodeList</h2>
-      <SeasonAccordion />
+      <h2>Episode list:</h2>
+      <div className={styles['accordion-container']}>
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+        <SeasonAccordion />
+      </div>
     </div>
   );
 };

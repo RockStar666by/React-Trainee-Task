@@ -1,23 +1,44 @@
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+$tab-label-color: #fff;
+$tab-label-background: lightseagreen;
+$tab-content-background: #fff;
+
+.tab {
+  position: relative;
+  padding: 10px;
+  width: 600px;
 }
 
-.active,
-.accordion:hover {
-  background-color: #ccc;
+.tab {
+  input {
+    display: none;
+  }
 }
 
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
+.tab {
+  label {
+    display: block;
+    padding: 10px;
+    color: $tab-label-color;
+    font-weight: bold;
+    background: $tab-label-background;
+    cursor: pointer;
+  }
+}
+
+.tab {
+  .tab-content {
+    background: $tab-content-background;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+    p {
+      padding: 10px;
+    }
+  }
+}
+
+.tab {
+  input:checked ~ .tab-content {
+    max-height: 100vh;
+  }
 }

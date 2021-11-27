@@ -1,0 +1,28 @@
+$summary-background: #545150;
+
+.summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  max-width: 1200px;
+  min-height: 300px;
+  width: 100%;
+  background-color: $summary-background;
+}
+
+.episode-image {
+  width: 180px;
+  height: 300px;
+}
+
+.episode-description {
+  width: 600px;
+  height: 300px;
+}
+
+.episode-info {
+  width: 300px;
+  height: 300px;
+}

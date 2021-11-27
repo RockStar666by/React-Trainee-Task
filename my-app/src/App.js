@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Show } from './Pages/Show/Show';
 import { Episode } from './Pages/Episode/Episode';
@@ -10,12 +10,14 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Header />
-        <Routes>
-          <Route exact path='/' element={<Show />} />
-          <Route exact path='/show/:id' element={<Show />} />
-          <Route exact path='/episode/:id' element={<Episode />} />
-        </Routes>
+        <div className={styles['App-container']}>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Show />} />
+            <Route path='/show/:id' element={<Show />} />
+            <Route path='/episode/:id' element={<Episode />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </div>

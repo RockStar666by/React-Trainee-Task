@@ -1,0 +1,12 @@
+$episode-background: grey;
+
+.episode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0 auto;
+  height: 100%;
+  min-height: 30px;
+  background-color: $episode-background;
+}

@@ -1,4 +1,22 @@
+$header-background: #545150;
+
 .header {
-  height: 100px;
-  background-color: #545150;
+  font-weight: bold;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $header-background;
+}
+
+.header-nav {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  color: white;
 }
