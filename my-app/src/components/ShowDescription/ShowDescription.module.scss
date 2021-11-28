@@ -26,3 +26,33 @@ $description-background: #545150;
   width: 300px;
   height: 300px;
 }
+
+@media (max-width: 320px) {
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    max-width: 320px;
+    min-height: 300px;
+    width: 100%;
+    background-color: $description-background;
+  }
+
+  .show-image {
+    width: 180px;
+    height: 300px;
+  }
+
+  .show-description {
+    width: 300px;
+    height: auto;
+    text-align: justify;
+  }
+
+  .show-info {
+    width: 300px;
+    height: 300px;
+  }
+}

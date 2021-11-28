@@ -10,9 +10,6 @@ export const Header = () => {
         <NavLink className={styles.link} to='/'>
           Home
         </NavLink>
-        <NavLink className={styles.link} to='/episode/1'>
-          Episodes
-        </NavLink>
       </nav>
     </div>
   );

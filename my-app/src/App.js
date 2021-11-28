@@ -14,7 +14,6 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Show />} />
-            <Route path='/show/:id' element={<Show />} />
             <Route
               path='/season/:season/episode/:episode'
               element={<Episode />}

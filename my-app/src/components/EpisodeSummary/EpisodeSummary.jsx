@@ -5,15 +5,18 @@ import styles from './EpisodeSummary.module.scss';
 
 export const EpisodeSummary = () => {
   const episodeState = useSelector((state) => state.episode.episode);
+  console.log(episodeState);
   return (
     <div className={styles['summary-container']}>
       <img
         className={styles['episode-image']}
-        src={episodeState.image.medium}
-        alt='Show'
+        src={episodeState.image === null ? null : episodeState.image.medium}
+        alt={episodeState.name}
       />
       <div className={styles['episode-description']}>
-        {Parser(episodeState.summary)}
+        {Parser(
+          episodeState.summary === null ? 'No summary' : episodeState.summary
+        )}
       </div>
       <div className={styles['episode-info']}>
         <h2>Episode Info</h2>

@@ -39,6 +39,14 @@ $tab-content-background: #fff;
 
 .tab {
   input:checked ~ .tab-content {
-    max-height: 100vh;
+    max-height: 2000px;
+  }
+}
+
+@media (max-width: 320px) {
+  .tab {
+    position: relative;
+    padding: 10px;
+    width: 300px;
   }
 }

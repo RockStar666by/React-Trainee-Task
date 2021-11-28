@@ -19,7 +19,7 @@ export const EpisodeList = () => {
 
   return (
     <div>
-      <h2>Episode list:</h2>
+      <h2 className={styles['accordion-header']}>Episode list:</h2>
       <div className={styles['accordion-container']}>
         {episodesState.seasons.map((_, index) => {
           return <SeasonAccordion seasonNumber={index} />;
