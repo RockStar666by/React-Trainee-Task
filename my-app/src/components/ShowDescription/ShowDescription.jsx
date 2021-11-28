@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import styles from './ShowDescription.module.scss';
+import Parser from 'html-react-parser';
 
 export const ShowDescription = () => {
+  const showState = useSelector((state) => state.show.show);
+  console.log(showState);
+  const seasonsState = useSelector((state) => state.episodes);
+  console.log(seasonsState);
   return (
     <div className={styles['description-container']}>
-      <img className={styles['show-image']} src={null} alt='Show' />
-      <div className={styles['show-description']}>This is ShowDescription</div>
+      <img
+        className={styles['show-image']}
+        src={showState.image.medium}
+        alt='Show'
+      />
+      <div className={styles['show-description']}>
+        {Parser(showState.summary)}
+      </div>
       <div className={styles['show-info']}>
-        <h2>ShowInfo</h2>
-        <div>Network: {null}</div>
-        <div>Schedule: {null}</div>
-        <div>Status: {null}</div>
-        <div>Show Type: {null}</div>
-        <div>Genres: {null}</div>
-        <div>Episodes ordered: {null}</div>
-        <div>Official site: {null}</div>
+        <h2>{showState.name}</h2>
+        <div>Network: {showState.network.name}</div>
+        <div>
+          Schedule: {showState.schedule.days},{showState.schedule.time}
+        </div>
+        <div>Status: {showState.status}</div>
+        <div>Show Type: {showState.type}</div>
+        <div>Genres: {showState.genres.join(', ')}</div>
+        <div>
+          Official site: <a href={showState.officialSite}>Link</a>
+        </div>
       </div>
     </div>
   );
