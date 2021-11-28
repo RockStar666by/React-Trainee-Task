@@ -15,7 +15,10 @@ function App() {
           <Routes>
             <Route path='/' element={<Show />} />
             <Route path='/show/:id' element={<Show />} />
-            <Route path='/episode/:id' element={<Episode />} />
+            <Route
+              path='/season/:season/episode/:episode'
+              element={<Episode />}
+            />
           </Routes>
         </div>
         <Footer />

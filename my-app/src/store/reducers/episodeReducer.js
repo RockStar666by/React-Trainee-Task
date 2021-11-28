@@ -21,10 +21,10 @@ const initState = {
 export const episodeReducer = (state = initState, action) => {
   switch (action.type) {
     case EPISODE_FETCH_SUCCEEDED: {
-      const episodes = action.payload.data;
+      const episode = action.payload.data;
       return {
         ...state,
-        episodes,
+        episode,
       };
     }
     default:

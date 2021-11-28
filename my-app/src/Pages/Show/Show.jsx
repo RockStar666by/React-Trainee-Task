@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { ShowDescription } from '../../components/ShowDescription/ShowDescription';
 import { EpisodeList } from '../../components/EpisodesList/EpisodeList';
 import styles from './Show.module.scss';
 import { SHOW_FETCH_REQUESTED } from 'store/actions';
-import { useSelector } from 'react-redux';
 
 export const Show = () => {
   const dispatch = useDispatch();
@@ -16,10 +15,12 @@ export const Show = () => {
       },
     });
   }, []);
+
+  const showState = useSelector((state) => state.show.show);
   return (
     <>
       <div className={styles.show}>
-        <h1>SHOW</h1>
+        <h1>{showState.name}</h1>
         <ShowDescription />
         <EpisodeList />
       </div>

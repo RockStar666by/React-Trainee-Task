@@ -1,12 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './EpisodeItem.module.scss';
-import { SeasonAccordion } from '../Accordion/Accordion';
 
-export const EpisodeItem = () => {
+export const EpisodeItem = (props) => {
   return (
-    <div>
-      <h2>episode item</h2>
-      <div className={styles['item-container']}></div>
+    <div className={styles['item-container']}>
+      <Link
+        to={'/season/' + (props.seasonNumber + 1) + '/episode/' + props.number}
+      >
+        <h3 className={styles['item-header']}>
+          Episode {props.number}. {props.name}
+        </h3>
+      </Link>
     </div>
   );
 };

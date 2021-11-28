@@ -1,12 +1,14 @@
 $item-background: #fff;
+$item-text: #000;
 
 .item-container {
-  height: 40px;
+  height: 10px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
+  padding-left: 10px;
   background-color: $item-background;
+}
+
+.item-header {
+  color: $item-text;
+  text-decoration: none;
 }

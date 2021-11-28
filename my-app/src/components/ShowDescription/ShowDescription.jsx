@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import styles from './ShowDescription.module.scss';
 import Parser from 'html-react-parser';
 
 export const ShowDescription = () => {
   const showState = useSelector((state) => state.show.show);
-  console.log(showState);
-  const seasonsState = useSelector((state) => state.episodes);
-  console.log(seasonsState);
+
   return (
     <div className={styles['description-container']}>
       <img

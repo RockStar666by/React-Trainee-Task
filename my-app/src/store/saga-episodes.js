@@ -19,7 +19,6 @@ export function* fetchEpisodes(action) {
       },
     });
     const seasons = yield select(getSeasonSelector);
-    console.log(seasons);
     yield put({
       type: SEASONS_DIVIDED,
       payload: {
