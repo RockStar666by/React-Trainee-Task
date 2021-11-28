@@ -1,0 +1,15 @@
+$item-background: #fff;
+$item-text: #000;
+
+.item-container {
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  background-color: $item-background;
+  text-overflow: ellipsis;
+}
+
+.item-header {
+  color: $item-text;
+  text-decoration: none;
+}

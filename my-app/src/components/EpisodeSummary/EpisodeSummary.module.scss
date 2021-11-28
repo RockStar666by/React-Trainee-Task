@@ -1,0 +1,57 @@
+$summary-background: #545150;
+
+.summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  max-width: 1200px;
+  min-height: 300px;
+  width: 100%;
+  background-color: $summary-background;
+}
+
+.episode-image {
+  width: 300px;
+  height: 180px;
+}
+
+.episode-description {
+  width: 500px;
+  height: 300px;
+}
+
+.episode-info {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 320px) {
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    max-width: 320px;
+    min-height: 300px;
+    width: 100%;
+    background-color: $summary-background;
+  }
+
+  .episode-image {
+    width: 300px;
+    height: 180px;
+  }
+
+  .episode-description {
+    width: 300px;
+    height: auto;
+  }
+
+  .episode-info {
+    width: 300px;
+    height: 300px;
+  }
+}

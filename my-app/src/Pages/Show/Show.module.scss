@@ -1,0 +1,12 @@
+$show-background: grey;
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0 auto;
+  height: 100%;
+  min-height: 30px;
+  background-color: $show-background;
+}

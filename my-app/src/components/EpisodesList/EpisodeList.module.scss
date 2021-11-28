@@ -1,0 +1,17 @@
+$accordion-background: #545150;
+
+.accordion-header {
+  padding-left: 20px;
+}
+
+.accordion-container {
+  min-height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: $accordion-background;
+}

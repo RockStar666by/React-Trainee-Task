@@ -1,0 +1,52 @@
+$tab-label-color: #fff;
+$tab-label-background: lightseagreen;
+$tab-content-background: #fff;
+
+.tab {
+  position: relative;
+  padding: 10px;
+  width: 600px;
+}
+
+.tab {
+  input {
+    display: none;
+  }
+}
+
+.tab {
+  label {
+    display: block;
+    padding: 10px;
+    color: $tab-label-color;
+    font-weight: bold;
+    background: $tab-label-background;
+    cursor: pointer;
+  }
+}
+
+.tab {
+  .tab-content {
+    background: $tab-content-background;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+    p {
+      padding: 10px;
+    }
+  }
+}
+
+.tab {
+  input:checked ~ .tab-content {
+    max-height: 2000px;
+  }
+}
+
+@media (max-width: 320px) {
+  .tab {
+    position: relative;
+    padding: 10px;
+    width: 300px;
+  }
+}

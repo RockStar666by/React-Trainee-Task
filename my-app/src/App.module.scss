@@ -1,0 +1,12 @@
+$app-container-background: grey;
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.App-container {
+  padding-bottom: 99px;
+  background-color: $app-container-background;
+}
